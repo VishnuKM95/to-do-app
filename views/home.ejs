@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User CRUD</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Add User</h2>
+
+    <div class="register">
+        <form action="/add" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit" id="addbutton">Add User</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <h2>User List</h2>
+
+    <ul class="list">
+        <% users.forEach(user => { %>
+
+        <li class="user-card">
+
+            <form action="/update/<%= user._id %>" method="POST" class="editform">
+
+                <div class="userinfo">
+                    <input type="text" name="name" value="<%= user.name %>" class="editinput">
+                    <input type="email" name="email" value="<%= user.email %>" class="editinput">
+                </div>
+
+                <div class="actions">
+                    <button class="update">Update</button>
+                </div>
+
+            </form>
+
+            <form action="/delete/<%= user._id %>" method="POST">
+                <button class="delete">Delete</button>
+            </form>
+
+        </li>
+
+        <% }) %>
+    </ul>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right,#7fd7d7,#7fd7d7);
+    margin:0;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+    background:#e6e6e6;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgb(28, 28, 28);
+}
+
+h2{
+    text-align:center;
+}
+
+/* Form */
+
+.register form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+input{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid gray;
+    font-size:14px;
+}
+
+#addbutton{
+    padding:12px;
+    background:#5a8ec2;
+    border:none;
+    border-radius:20px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* User List */
+
+.list{
+    background:#a5aaff;
+    padding:15px;
+    list-style:none;
+    border-radius:10px;
+}
+
+/* User Card */
+
+.user-card{
+    background:white;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+/* Update form */
+
+.editform{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.userinfo{
+    display:flex;
+    gap:10px;
+}
+
+.editinput{
+    padding:6px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/* Buttons */
+
+.actions{
+    display:flex;
+    gap:8px;
+}
+
+button{
+    padding:6px 12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.update{
+    background:#4caf50;
+    color:white;
+}
+
+.delete{
+    background:#e53935;
+    color:white;
+}
+
+/* ------------------ */
+/* 📱 MOBILE */
+/* ------------------ */
+
+@media (max-width:600px){
+
+.user-card{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.userinfo{
+    flex-direction:column;
+    width:100%;
+}
+
+.editinput{
+    width:100%;
+}
+
+.editform{
+    width:100%;
+    flex-direction:column;
+}
+
+.actions{
+    width:100%;
+}
+
+button{
+    width:100%;
+}
+
+}
+
+/* ------------------ */
+/* 📟 TABLET */
+/* ------------------ */
+
+@media (min-width:601px) and (max-width:900px){
+
+.container{
+    max-width:600px;
+}
+
+}
+
+/* ------------------ */
+/* 💻 DESKTOP */
+/* ------------------ */
+
+@media (min-width:901px){
+
+.container{
+    max-width:700px;
+}
+
+}
